@@ -1,0 +1,35 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "publicDomain": "https://reward-api.astranaut.dev",
+  "website": "https://reward.astranaut.dev",
+  "authentication": {
+    "oauth": {
+      "redirect": "/",
+      "google": {
+        "redirect_uri": "https://reward-api.astranaut.dev/oauth/google/callback",
+        "key": "978232047969-o1pn02t0afuquhstojdi0rckbn8vju17.apps.googleusercontent.com",
+        "secret": "zRBmHcL2OL0iq2pffUOFcffw",
+        "scope": ["openid", "email"],
+        "nonce": true
+      }
+    },
+    "entity": "user",
+    "service": "users",
+    "secret": "ZxEURwtwAQtEp0Uwhir1RrBtDas=",
+    "authStrategies": ["jwt", "local"],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://yourdomain.com",
+      "issuer": "stella",
+      "algorithm": "RS256",
+      "expiresIn": "10d"
+    },
+    "local": {
+      "usernameField": "email",
+      "passwordField": "password"
+    }
+  }
+}

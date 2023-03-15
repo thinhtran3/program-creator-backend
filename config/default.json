@@ -1,0 +1,53 @@
+{
+  "host": "localhost",
+  "port": 3030,
+  "publicDomain": "http://localhost:3030",
+  "public": "../public/",
+  "website": "http://localhost:8080",
+  "paginate": {
+    "default": 10,
+    "max": 50
+  },
+  "authentication": {
+    "oauth": {
+      "redirect": "/",
+      "google": {
+        "key": "978232047969-o1pn02t0afuquhstojdi0rckbn8vju17.apps.googleusercontent.com",
+        "secret": "",
+        "scope": [
+          "openid",
+          "email"
+        ],
+        "nonce": true
+      }
+    },
+    "entity": "user",
+    "service": "users",
+    "secret": "=",
+    "authStrategies": [
+      "jwt",
+      "local"
+    ],
+    "jwtOptions": {
+      "header": {
+        "typ": "access"
+      },
+      "audience": "https://reward.astranaut.io",
+      "issuer": "stella",
+      "algorithm": "RS256",
+      "expiresIn": "10d"
+    },
+    "local": {
+      "usernameField": "email",
+      "passwordField": "password"
+    },
+    "cookie": {
+      "enabled": false
+    }
+  },
+  "mysql": "mysql://exampleuser:examplepassword@localhost:3306/exampledb",
+  "redis": "http://localhost:6379",
+  "network": "TESTNET",
+  "privateKey": "",
+  "rpcUrl": ""
+}
